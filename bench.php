@@ -14,6 +14,7 @@ require 'bench/variable.php';
 require 'bench/test.php';
 require 'bench/reference.php';
 require 'bench/numeric.php';
+require 'bench/error.php';
 
 bench_array();
 bench_string();
@@ -21,30 +22,31 @@ bench_variable();
 bench_test();
 bench_reference();
 bench_numeric();
+bench_error();
 
 function bench_skeleton($max)
 {
     echo 'Bench : skeleton' . PHP_EOL;
 
     $value = 'test_value';
-    $startA = microtime(TRUE);
+    $startA = microtime(true);
     for ($i = 0; $i <= $max; $i++) {
     }
-    $endA = microtime(TRUE);
+    $endA = microtime(true);
 
     echo ' A : ' . ($endA - $startA) .PHP_EOL;
 
-    $startB = microtime(TRUE);
+    $startB = microtime(true);
     for ($i = 0; $i <= $max; $i++) {
     }
-    $endB = microtime(TRUE);
+    $endB = microtime(true);
 
     echo ' B : ' . ($endB - $startB) . PHP_EOL;
 
-    $startC = microtime(TRUE);
+    $startC = microtime(true);
     for ($i = 0; $i <= $max; $i++) {
     }
-    $endC = microtime(TRUE);
+    $endC = microtime(true);
 
     echo ' C : ' . ($endC - $startC) . PHP_EOL;
 

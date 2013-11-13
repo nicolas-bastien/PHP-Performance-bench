@@ -20,25 +20,25 @@ function bench_increment($max)
     echo 'Bench : increment' . PHP_EOL;
 
     $value = 'test_value';
-    $startA = microtime(TRUE);
+    $startA = microtime(true);
     $a = 0;
     $b = 0;
     for ($i = 0; $i <= $max; $i++) {
         $a++;
         $b++;
     }
-    $endA = microtime(TRUE);
+    $endA = microtime(true);
 
     echo ' $a++ : ' . ($endA - $startA) .PHP_EOL;
 
-    $startB = microtime(TRUE);
+    $startB = microtime(true);
     $a = 0;
     $b = 0;
     for ($i = 0; $i <= $max; $i++) {
         ++$a;
         ++$b;
     }
-    $endB = microtime(TRUE);
+    $endB = microtime(true);
 
     echo ' ++$a : ' . ($endB - $startB) . PHP_EOL;
 }

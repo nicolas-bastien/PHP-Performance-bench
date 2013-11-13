@@ -38,21 +38,21 @@ function bench_variable_reference($max) {
     $tab = array();
 
     $value = 'test_value';
-    $startA = microtime(TRUE);
+    $startA = microtime(true);
     for ($i = 0; $i <= $max; $i++) {
         $myBench->dummy_reference($tab);
     }
-    $endA = microtime(TRUE);
+    $endA = microtime(true);
     echo count($tab);
     echo ' Reference : ' . ($endA - $startA) .PHP_EOL;
 
-    $startB = microtime(TRUE);
+    $startB = microtime(true);
     for ($i = 0; $i <= $max; $i++) {
         $myBench->dummy_class_variable();
 
     }
     echo count($myBench->tab);
-    $endB = microtime(TRUE);
+    $endB = microtime(true);
 
     echo ' class variable : ' . ($endB - $startB) . PHP_EOL;
 }

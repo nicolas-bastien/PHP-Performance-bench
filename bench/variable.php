@@ -22,7 +22,7 @@ function bench_is_null($max)
     $valueNotNull = 'test_value';
 
 
-    $startA = microtime(TRUE);
+    $startA = microtime(true);
     for ($i = 0; $i <= $max; $i++) {
         if (is_null($valueNull)) {
 
@@ -31,11 +31,11 @@ function bench_is_null($max)
 
         }
     }
-    $endA = microtime(TRUE);
+    $endA = microtime(true);
 
     echo ' is_null : ' . ($endA - $startA) .PHP_EOL;
 
-    $startB = microtime(TRUE);
+    $startB = microtime(true);
     for ($i = 0; $i <= $max; $i++) {
         if ($valueNull == null) {
 
@@ -44,11 +44,11 @@ function bench_is_null($max)
 
         }
     }
-    $endB = microtime(TRUE);
+    $endB = microtime(true);
 
     echo ' == null : ' . ($endB - $startB) . PHP_EOL;
 
-    $startC = microtime(TRUE);
+    $startC = microtime(true);
     for ($i = 0; $i <= $max; $i++) {
         if ($valueNull === null) {
 
@@ -57,7 +57,7 @@ function bench_is_null($max)
 
         }
     }
-    $endC = microtime(TRUE);
+    $endC = microtime(true);
 
     echo ' === null : ' . ($endC - $startC) . PHP_EOL;
 }

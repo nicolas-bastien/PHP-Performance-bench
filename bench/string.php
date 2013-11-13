@@ -25,36 +25,36 @@ function bench_strncmp($max)
     echo 'Bench strncmp vs strpos vs substr' . PHP_EOL;
 
     $value = 'test_value';
-    $startA = microtime(TRUE);
+    $startA = microtime(true);
     for ($i = 0; $i <= $max; $i++) {
         if (strncmp($value, 'F_TRAGENF', 9) == 0) {
             //
         }
     }
-    $endA = microtime(TRUE);
+    $endA = microtime(true);
 
     echo ' strncmp : ' . ($endA - $startA) .PHP_EOL;
 
-    $startB = microtime(TRUE);
+    $startB = microtime(true);
     for ($i = 0; $i <= $max; $i++) {
         if (0 === strpos($value, 'F_TRAGENF')) {
             ///
         }
 
     }
-    $endB = microtime(TRUE);
+    $endB = microtime(true);
 
     echo ' strpos : ' . ($endB - $startB) . PHP_EOL;
 
     //voir == avec substr
-    $startC = microtime(TRUE);
+    $startC = microtime(true);
     for ($i = 0; $i <= $max; $i++) {
         if ('F_TRAGENF' === substr($value, 0, 9)) {
             ///
         }
 
     }
-    $endC = microtime(TRUE);
+    $endC = microtime(true);
 
     echo ' substr : ' . ($endC - $startC) . PHP_EOL;
 }

@@ -23,7 +23,7 @@ function bench_if_3($max)
     echo 'Bench if vs switch on 3 tests' . PHP_EOL;
 
     $value = 'test_value';
-    $startA = microtime(TRUE);
+    $startA = microtime(true);
     for ($i = 0; $i <= $max; $i++) {
         if ($value == 'test_value_1') {
             $result = 1;
@@ -33,11 +33,11 @@ function bench_if_3($max)
             $result = 1;
         }
     }
-    $endA = microtime(TRUE);
+    $endA = microtime(true);
 
     echo ' if/else : ' . ($endA - $startA) .PHP_EOL;
 
-    $startB = microtime(TRUE);
+    $startB = microtime(true);
     for ($i = 0; $i <= $max; $i++) {
         switch ($value) {
             case 'test_value_1':
@@ -50,7 +50,7 @@ function bench_if_3($max)
                 $result = 1;
         }
     }
-    $endB = microtime(TRUE);
+    $endB = microtime(true);
 
     echo ' switch : ' . ($endB - $startB) . PHP_EOL;
 }
@@ -61,7 +61,7 @@ function bench_if_9($max)
     echo 'Bench if vs switch on 9 tests' . PHP_EOL;
 
     $value = 'test_value';
-    $startA = microtime(TRUE);
+    $startA = microtime(true);
     for ($i = 0; $i <= $max; $i++) {
         if ($value == 'test_value_1') {
             $result = 1;
@@ -85,11 +85,11 @@ function bench_if_9($max)
             $result = 1;
         }
     }
-    $endA = microtime(TRUE);
+    $endA = microtime(true);
 
     echo ' if/else : ' . ($endA - $startA) .PHP_EOL;
 
-    $startB = microtime(TRUE);
+    $startB = microtime(true);
     for ($i = 0; $i <= $max; $i++) {
         switch ($value) {
             case 'test_value_1':
@@ -122,7 +122,7 @@ function bench_if_9($max)
                 $result = 1;
         }
     }
-    $endB = microtime(TRUE);
+    $endB = microtime(true);
 
     echo ' switch : ' . ($endB - $startB) . PHP_EOL;
 }
@@ -134,7 +134,7 @@ function bench_if_20($max)
     echo 'Bench if vs switch on 20 tests' . PHP_EOL;
 
     $value = 'test_value';
-    $startA = microtime(TRUE);
+    $startA = microtime(true);
     for ($i = 0; $i <= $max; $i++) {
         if ($value == 'test_value_1') {
             $result = 1;
@@ -180,11 +180,11 @@ function bench_if_20($max)
             $result = 1;
         }
     }
-    $endA = microtime(TRUE);
+    $endA = microtime(true);
 
     echo ' if/else : ' . ($endA - $startA) .PHP_EOL;
 
-    $startB = microtime(TRUE);
+    $startB = microtime(true);
     for ($i = 0; $i <= $max; $i++) {
         switch ($value) {
             case 'test_value_1':
@@ -249,7 +249,7 @@ function bench_if_20($max)
                 $result = 1;
         }
     }
-    $endB = microtime(TRUE);
+    $endB = microtime(true);
 
     echo ' switch : ' . ($endB - $startB) . PHP_EOL;
 }
@@ -260,7 +260,7 @@ function bench_if_ternary($max)
     echo 'Bench if vs ternary' . PHP_EOL;
 
     $value = 'test_value';
-    $startA = microtime(TRUE);
+    $startA = microtime(true);
     for ($i = 0; $i <= $max; $i++) {
         if ($value == 'test_1') {
             $result = 1;
@@ -268,15 +268,15 @@ function bench_if_ternary($max)
             $result = 2;
         }
     }
-    $endA = microtime(TRUE);
+    $endA = microtime(true);
 
     echo ' if : ' . ($endA - $startA) .PHP_EOL;
 
-    $startB = microtime(TRUE);
+    $startB = microtime(true);
     for ($i = 0; $i <= $max; $i++) {
         $result = ($value == 'test_1') ? 1 : 2;
     }
-    $endB = microtime(TRUE);
+    $endB = microtime(true);
 
     echo ' ()?: : ' . ($endB - $startB) . PHP_EOL;
 }
