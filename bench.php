@@ -9,6 +9,41 @@
  */
 
 require 'bench/array.php';
-
+require 'bench/string.php';
+require 'bench/variable.php';
+require 'bench/test.php';
 
 bench_array();
+bench_string();
+bench_variable();
+bench_test();
+
+
+
+
+
+function bench_skeleton($max)
+{
+    $value = 'test_value';
+    $startA = microtime(TRUE);
+    for ($i = 0; $i <= $max; $i++) {
+    }
+    $endA = microtime(TRUE);
+
+    echo ' A : ' . ($endA - $startA) .PHP_EOL;
+
+    $startB = microtime(TRUE);
+    for ($i = 0; $i <= $max; $i++) {
+    }
+    $endB = microtime(TRUE);
+
+    echo ' B : ' . ($endB - $startB) . PHP_EOL;
+
+    $startC = microtime(TRUE);
+    for ($i = 0; $i <= $max; $i++) {
+    }
+    $endC = microtime(TRUE);
+
+    echo ' C : ' . ($endC - $startC) . PHP_EOL;
+
+}
