@@ -12,18 +12,20 @@ require 'bench/array.php';
 require 'bench/string.php';
 require 'bench/variable.php';
 require 'bench/test.php';
+require 'bench/reference.php';
+require 'bench/numeric.php';
 
 bench_array();
 bench_string();
 bench_variable();
 bench_test();
-
-
-
-
+bench_reference();
+bench_numeric();
 
 function bench_skeleton($max)
 {
+    echo 'Bench : skeleton' . PHP_EOL;
+
     $value = 'test_value';
     $startA = microtime(TRUE);
     for ($i = 0; $i <= $max; $i++) {
