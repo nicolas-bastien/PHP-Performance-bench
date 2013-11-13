@@ -1,0 +1,13 @@
+language: php
+
+php:
+  - 5.3
+  - 5.4
+  - 5.5
+
+script:
+  - php bench.php
+  - phpcs --extensions=php --encoding=utf-8 --standard=PSR2 -np .
+
+notifications:
+  email: "nbastien.pro@gmail.com"
