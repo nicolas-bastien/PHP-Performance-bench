@@ -23,7 +23,7 @@ class MyObject
 
     public function __construct()
     {
-        $this->var = new stdClass();
+        $this->var = new \stdClass();
         $this->var->subvar = 'hello_subvar';
         $this->subvar = 'hello_subvar';
     }

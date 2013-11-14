@@ -22,11 +22,11 @@ bench_array();
 bench_string();
 bench_variable();
 bench_test();
-bench_reference();
+Bench\Reference\bench_reference();
 bench_numeric();
 bench_error();
 bench_loop();
-bench_object();
+Bench\Object\bench_object();
 
 function bench_skeleton($max)
 {
