@@ -8,6 +8,8 @@
  * file that was distributed with this source code.
  */
 
+namespace Bench\Reference;
+
 function bench_reference()
 {
     bench_variable_reference(1000000);
@@ -22,12 +24,12 @@ class MyBench
         $this->tab = array();
     }
 
-    public function dummy_reference(&$tab)
+    public function dummyReference(&$tab)
     {
         $tab[] = 'anew entry';
     }
 
-    public function dummy_class_variable()
+    public function dummyClassVariable()
     {
         $this->tab[] = 'anew entry';
     }
@@ -42,7 +44,7 @@ function bench_variable_reference($max)
     $value = 'test_value';
     $startA = microtime(true);
     for ($i = 0; $i <= $max; $i++) {
-        $myBench->dummy_reference($tab);
+        $myBench->dummyReference($tab);
     }
     $endA = microtime(true);
     echo count($tab);
@@ -50,7 +52,7 @@ function bench_variable_reference($max)
 
     $startB = microtime(true);
     for ($i = 0; $i <= $max; $i++) {
-        $myBench->dummy_class_variable();
+        $myBench->dummyClassVariable();
 
     }
     echo count($myBench->tab);

@@ -10,7 +10,7 @@
 
 function bench_string()
 {
-//    bench_strncmp(10000);
+    bench_strncmp(10000);
     bench_concat(100000);
 }
 
@@ -81,12 +81,4 @@ function bench_concat($max)
     $endB = microtime(true);
 
     echo ' sprintf : ' . ($endB - $startB) . PHP_EOL;
-
-//    $startC = microtime(true);
-//    for ($i = 0; $i <= $max; $i++) {
-//    }
-//    $endC = microtime(true);
-//
-//    echo ' C : ' . ($endC - $startC) . PHP_EOL;
-
 }

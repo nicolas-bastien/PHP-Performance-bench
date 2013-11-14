@@ -8,6 +8,8 @@
  * file that was distributed with this source code.
  */
 
+namespace Bench\Object;
+
 function bench_object()
 {
     bench_access(100000);

@@ -11,8 +11,8 @@
 function bench_variable()
 {
     bench_is_null(10000);
-//    bench_init(1000000);
-//    bench_compare(1000);
+    bench_init(1000000);
+    bench_compare(1000);
 }
 
 function bench_is_null($max)
@@ -111,14 +111,6 @@ function bench_init($max)
     $endB = microtime(true);
 
     echo ' One line : ' . ($endB - $startB) . PHP_EOL;
-
-//    $startC = microtime(true);
-//    for ($i = 0; $i <= $max; $i++) {
-//    }
-//    $endC = microtime(true);
-//
-//    echo ' C : ' . ($endC - $startC) . PHP_EOL;
-
 }
 
 function bench_compare($max)
