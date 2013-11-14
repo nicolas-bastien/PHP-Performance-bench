@@ -8,12 +8,10 @@
  * file that was distributed with this source code.
  */
 
-
 function bench_numeric()
 {
     bench_increment(1000000);
 }
-
 
 function bench_increment($max)
 {

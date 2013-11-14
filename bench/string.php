@@ -8,12 +8,11 @@
  * file that was distributed with this source code.
  */
 
-
 function bench_string()
 {
-    bench_strncmp(10000);
+//    bench_strncmp(10000);
+    bench_concat(100000);
 }
-
 
 /**
  * bench_strncmp(1000);
@@ -57,4 +56,37 @@ function bench_strncmp($max)
     $endC = microtime(true);
 
     echo ' substr : ' . ($endC - $startC) . PHP_EOL;
+}
+
+function bench_concat($max)
+{
+    echo 'Bench : skeleton' . PHP_EOL;
+
+    $valueA = 'test_valueA';
+    $valueB = 'test_valueB';
+    $result = '';
+    $startA = microtime(true);
+    for ($i = 0; $i <= $max; $i++) {
+        $result .= $valueA . ' - ' . $valueB;
+    }
+    $endA = microtime(true);
+
+    echo ' . : ' . ($endA - $startA) .PHP_EOL;
+
+    $result = '';
+    $startB = microtime(true);
+    for ($i = 0; $i <= $max; $i++) {
+        $result .= sprintf('%s - %s', $valueA, $valueB);
+    }
+    $endB = microtime(true);
+
+    echo ' sprintf : ' . ($endB - $startB) . PHP_EOL;
+
+//    $startC = microtime(true);
+//    for ($i = 0; $i <= $max; $i++) {
+//    }
+//    $endC = microtime(true);
+//
+//    echo ' C : ' . ($endC - $startC) . PHP_EOL;
+
 }

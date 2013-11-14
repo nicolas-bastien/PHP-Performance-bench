@@ -8,7 +8,6 @@
  * file that was distributed with this source code.
  */
 
-
 function bench_error()
 {
     bench_hide_isset_error(1000000);
@@ -24,11 +23,11 @@ function bench_hide_isset_error($max)
     $arrayTest = array('key_test' => 'value_test');
     for ($i = 0; $i <= $max; $i++) {
         $value = @$arrayTest['key_test'];
-        if (isset($value)){
+        if (isset($value)) {
             $result = 1;
         }
         $valueNotSet = @$arrayTest['key_test_not_set'];
-        if (isset($valueNotSet)){
+        if (isset($valueNotSet)) {
             $result = 1;
         }
     }
@@ -38,11 +37,11 @@ function bench_hide_isset_error($max)
 
     $startB = microtime(true);
     for ($i = 0; $i <= $max; $i++) {
-        if (isset($arrayTest['key_test'])){
+        if (isset($arrayTest['key_test'])) {
             $value = $arrayTest['key_test'];
             $result = 1;
         }
-        if (isset($arrayTest['key_test_not_set'])){
+        if (isset($arrayTest['key_test_not_set'])) {
             $value = $arrayTest['key_test_not_set'];
             $result = 1;
         }
@@ -51,8 +50,6 @@ function bench_hide_isset_error($max)
 
     echo ' isset : ' . ($endB - $startB) . PHP_EOL;
 }
-
-
 
 function bench_hide_error($max)
 {

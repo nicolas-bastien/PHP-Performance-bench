@@ -15,6 +15,8 @@ require 'bench/test.php';
 require 'bench/reference.php';
 require 'bench/numeric.php';
 require 'bench/error.php';
+require 'bench/loop.php';
+require 'bench/object.php';
 
 bench_array();
 bench_string();
@@ -23,6 +25,8 @@ bench_test();
 bench_reference();
 bench_numeric();
 bench_error();
+bench_loop();
+bench_object();
 
 function bench_skeleton($max)
 {

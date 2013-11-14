@@ -8,7 +8,6 @@
  * file that was distributed with this source code.
  */
 
-
 function bench_test()
 {
     bench_if_3(100000);
@@ -16,7 +15,6 @@ function bench_test()
     bench_if_20(100000);
     bench_if_ternary(1000000);
 }
-
 
 function bench_if_3($max)
 {
@@ -54,7 +52,6 @@ function bench_if_3($max)
 
     echo ' switch : ' . ($endB - $startB) . PHP_EOL;
 }
-
 
 function bench_if_9($max)
 {
@@ -126,8 +123,6 @@ function bench_if_9($max)
 
     echo ' switch : ' . ($endB - $startB) . PHP_EOL;
 }
-
-
 
 function bench_if_20($max)
 {
@@ -253,7 +248,6 @@ function bench_if_20($max)
 
     echo ' switch : ' . ($endB - $startB) . PHP_EOL;
 }
-
 
 function bench_if_ternary($max)
 {

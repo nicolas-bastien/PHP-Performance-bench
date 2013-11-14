@@ -8,31 +8,33 @@
  * file that was distributed with this source code.
  */
 
-
 function bench_reference()
 {
     bench_variable_reference(1000000);
 }
 
-class MyBench {
-
+class MyBench
+{
     public $tab;
 
-    function __construct()
+    public function __construct()
     {
         $this->tab = array();
     }
 
-    function dummy_reference(&$tab) {
+    public function dummy_reference(&$tab)
+    {
         $tab[] = 'anew entry';
     }
 
-    function dummy_class_variable(){
+    public function dummy_class_variable()
+    {
         $this->tab[] = 'anew entry';
     }
 }
 
-function bench_variable_reference($max) {
+function bench_variable_reference($max)
+{
     $myBench = new MyBench();
 
     $tab = array();
@@ -56,4 +58,3 @@ function bench_variable_reference($max) {
 
     echo ' class variable : ' . ($endB - $startB) . PHP_EOL;
 }
-
